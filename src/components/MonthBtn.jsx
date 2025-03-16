@@ -9,4 +9,3 @@ function MonthBtn({ value, isSelected, onClick }) {
 }
 
 export default MonthBtn;
-// "homepage": "https://Grekov118.github.io/#/grekov-test/",
