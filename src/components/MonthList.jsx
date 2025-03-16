@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import MonthBtn from "./MonthBtn";
 import styles from "./Popup.module.css";
 import  useValue  from "../contexts/ValueContext";
