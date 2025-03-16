@@ -1,0 +1,37 @@
+@font-face {
+	font-family: "Lab Grotesque";
+	src: url("https://db.onlinewebfonts.com/t/5f4cf05e3d14b070a09eff0243790d58.eot");
+	src: url("https://db.onlinewebfonts.com/t/5f4cf05e3d14b070a09eff0243790d58.eot?#iefix")format("embedded-opentype"),
+	url("https://db.onlinewebfonts.com/t/5f4cf05e3d14b070a09eff0243790d58.woff2")format("woff2"),
+	url("https://db.onlinewebfonts.com/t/5f4cf05e3d14b070a09eff0243790d58.woff")format("woff"),
+	url("https://db.onlinewebfonts.com/t/5f4cf05e3d14b070a09eff0243790d58.ttf")format("truetype"),
+	url("https://db.onlinewebfonts.com/t/5f4cf05e3d14b070a09eff0243790d58.svg#Lab Grotesque")format("svg");
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	min-width: 320px;
+    min-height: 411px;
+    overflow: hidden;
+
+  font-family: "Lab Grotesque", sans-serif;
+  background-color: transparent;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow: hidden;
+}
