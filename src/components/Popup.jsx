@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import styles from "./Popup.module.css";
 import useValue from "../contexts/ValueContext";
 
@@ -21,7 +21,6 @@ function PopupFirst() {
     e.preventDefault();
     if (!query) return;
   }
-
 
   const calculate = useCallback(() => {
     if (selectedValue !== null) {
@@ -79,7 +78,7 @@ function PopupFirst() {
 const popupRef = useRef(null);
 
 const handleClose = useCallback(() => {
-	navigate(-1);
+	navigate(-1); 
  }, [navigate]); 
 
  useEffect(() => {
@@ -93,7 +92,7 @@ const handleClose = useCallback(() => {
 	return () => {
 	  document.removeEventListener("mousedown", handleClickOutside);
 	};
- }, [handleClose]);
+ }, [handleClose]); 
 
 
 

@@ -1,22 +1,17 @@
-import React, { useState, useEffect } from "react";
+import { useState} from "react";
 import MonthBtn from "./MonthBtn";
 import styles from "./Popup.module.css";
 import  useValue  from "../contexts/ValueContext";
 
 function MonthList() {
-  const [data, setData] = useState([]);
+	const [data, setData] = useState([
+		{ id: 0, isSelected: true, value: 12 },
+		{ id: 1, isSelected: false, value: 24 },
+		{ id: 2, isSelected: false, value: 36 },
+		{ id: 3, isSelected: false, value: 48 },
+	 ]);
   const { updateValue } = useValue(); 
 
-  useEffect(() => {
-    fetch("/data.json")
-      .then((response) => response.json())
-      .then((data) => {
-        setData(data);
-      })
-      .catch((error) => {
-        console.error("Ошибка при загрузке данных:", error);
-      });
-  }, []);
 
  
   function handleSelect(id, value) {
