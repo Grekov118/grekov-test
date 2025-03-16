@@ -1,9 +1,11 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import Popup from "./components/Popup";
 import Screen from "./components/Screen";
 import { ValueProvider } from "./contexts/ValueContext";
 
-const router = createBrowserRouter([
+// const router = createBrowserRouter([
+const router = createHashRouter([
+
   {
     path: "/",
     element: <Screen />,
