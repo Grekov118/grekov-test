@@ -22,20 +22,20 @@ function PopupFirst() {
     if (!query) return;
   }
 
-  // Функция calculate, теперь мемоизирована через useCallback
+
   const calculate = useCallback(() => {
     if (selectedValue !== null) {
       let result;
       if (isYearSelected) {
-        result = (query / selectedValue) * 12; // Пример расчета для года
+        result = (query / selectedValue) * 12; 
       } else {
-        result = query / selectedValue; // Пример расчета для месяца
+        result = query / selectedValue; 
       }
-      setResult(result); // Устанавливаем результат
+      setResult(result); 
     } else {
       console.log("Упс, что-то пошло не так...");
     }
-  }, [query, selectedValue, isYearSelected]); // Указываем зависимости для calculate
+  }, [query, selectedValue, isYearSelected]); 
 
   const handleYearClick = () => {
     setIsYearSelected(true);
@@ -79,13 +79,13 @@ function PopupFirst() {
 const popupRef = useRef(null);
 
 const handleClose = useCallback(() => {
-	navigate(-1); // Перенаправляем на предыдущую страницу
- }, [navigate]); // Добавляем `navigate` в зависимости
+	navigate(-1);
+ }, [navigate]); 
 
  useEffect(() => {
 	const handleClickOutside = (event) => {
 	  if (popupRef.current && !popupRef.current.contains(event.target)) {
-		 handleClose(); // Закрываем попап при клике вне него
+		 handleClose(); 
 	  }
 	};
 
@@ -93,7 +93,7 @@ const handleClose = useCallback(() => {
 	return () => {
 	  document.removeEventListener("mousedown", handleClickOutside);
 	};
- }, [handleClose]); // Теперь handleClose стабилен
+ }, [handleClose]);
 
 
 
