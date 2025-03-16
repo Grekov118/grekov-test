@@ -1,5 +1,6 @@
 {
-  "name": "test",
+  "name": "vite-project",
+  "private": false,
   "homepage": "https://Grekov118.github.io/grekov-test/",
   "version": "0.0.0",
   "type": "module",
@@ -8,7 +9,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-	 "predeploy": "npm run build",
+	  "predeploy": "npm run build",
 	 "deploy": "gh-pages -d dist"
   },
   "dependencies": {
