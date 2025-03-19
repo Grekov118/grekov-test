@@ -85,7 +85,8 @@ function ValueProvider({children}) {
         handleMonthClick,
         handleYearClick,
         handleSubmit,
-		  updateValue
+		  updateValue,
+		  isYearSelected
       }}
     >
       {children}
