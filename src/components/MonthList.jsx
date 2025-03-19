@@ -1,7 +1,7 @@
-import { useState} from "react";
+import { useState, useContext} from "react";
 import MonthBtn from "./MonthBtn";
 import styles from "./Popup.module.css";
-import  useValue  from "../contexts/ValueContext";
+import { ValueContext } from "../contexts/ValueContext";
 
 function MonthList() {
 	const [data, setData] = useState([
@@ -10,32 +10,29 @@ function MonthList() {
 		{ id: 2, isSelected: false, value: 36 },
 		{ id: 3, isSelected: false, value: 48 },
 	 ]);
-  const { updateValue } = useValue(); 
+  const { updateValue } = useContext(ValueContext);
 
 
- 
   function handleSelect(id, value) {
-    setData((prevData) =>
-      prevData.map((btn) =>
-        btn.id === id ? { ...btn, isSelected: true } : { ...btn, isSelected: false }
-      )
-    );
-    updateValue(value); 
-  }
+	setData((prevData) =>
+	  prevData.map((btn) =>
+		 btn.id === id ? { ...btn, isSelected: true } : { ...btn, isSelected: false }
+	  )
+	);
+	updateValue(value); 
+ }
 
   return (
-  
-      <ul className={styles.count__months}>
-        {data.map((btn) => (
-          <MonthBtn
-            key={btn.id}
-            value={btn.value}
-            isSelected={btn.isSelected}
-            onClick={() => handleSelect(btn.id, btn.value)} 
-          />
-        ))}
-      </ul>
-   
+    <ul className={styles.count__months}>
+      {data.map((btn) => (
+        <MonthBtn
+          key={btn.id}
+          value={btn.value}
+          isSelected={btn.isSelected}
+          onClick={() => handleSelect(btn.id, btn.value)} 
+        />
+      ))}
+    </ul>
   );
 }
 
